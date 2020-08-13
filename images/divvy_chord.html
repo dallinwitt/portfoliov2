@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Chord - Python wrapper around d3-chord
+
+    This package enables the generation of Chord diagrams. They can be saved 
+    directly to HTML files or displayed in a Jupyter Notebook output cell.
+
+    Copyright 2020, Dr. Shahin Rostami
+    http://shahinrostami.com
+    https://github.com/shahinrostami/chord
+    https://pypi.org/project/chord/
+    -->
+  	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Chord Diagram</title>
+    <!-- Google Fonts -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,900"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <style>
+      .tippy-content {
+        font-family: "Lato", sans-serif;
+      }
+
+      #chart-0a02589d {
+
+        font-size: 16px;
+        font-family: "Lato", sans-serif;
+        text-align: center;
+        fill: #4c40bf;
+      }
+
+      #chart-0a02589d svg {
+        max-width: 700px;
+      }
+
+      @media (min-width: 600px) {
+				#chart-0a02589d{
+					font-size: 20px;
+				}
+			}
+    </style>
+  </head>
+  <body>
+    <div id="chart-0a02589d" class="chord">
+    </div>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script>
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "https://d3js.org/d3.v5.min.js";
+
+      script.onload = function () {
+
+        var script2 = document.createElement("script");
+        script2.type = "text/javascript";
+        script2.src = "https://shahinrostami.com/assets/chord/script.js";
+        script2.onload = function () {
+          margin = {
+          left: 0,
+          top: 0,
+          right: 0,
+          bottom: 0
+        };
+        width = Math.min(window.innerWidth, 700) - margin.left - margin.right;
+        height = Math.min(window.innerWidth, 700) - margin.top - margin.bottom;
+        innerRadius = Math.min(width, height) * 0.39;
+        outerRadius = innerRadius * 1.1;
+
+      tag_id = "chart-0a02589d";
+      padding = 0.01;
+      Names = [0, 1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 14, 16, 17, 18, 20, 21, 23, 24, 25, 26, 27, 28, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 45, 46, 48, 49, 50];
+	  Names_redux = ['NA', ' ', ' ', ' ', ' ', 5, ' ', 9, 10, 11, 12, ' ', 16, 17, 18, 20, ' ', 23, 24, 25, 26, ' ', ' ', ' ', ' ', 33, 34, ' ', 36, ' ', ' ', 39, 40, 41, 45, 46, 48, 49, ' '];
+      colors = d3.schemeSet1;
+      opacityDefault = 0.8;
+      matrix = [[18205, 0, 0, 0, 1, 2908, 2, 0, 12, 92, 3, 0, 548, 3, 142, 11, 0, 0, 323, 106, 2, 173, 0, 0, 0, 25, 144, 3, 174, 169, 23, 206, 26, 23, 3, 21, 1, 0, 1], [0, 1327, 3, 70, 7, 0, 0, 211, 87, 19, 0, 297, 1, 0, 0, 0, 0, 356, 0, 1, 550, 0, 46, 0, 1, 6, 2, 0, 157, 0, 0, 1, 11, 94, 0, 344, 343, 6, 0], [0, 8, 184, 32, 75, 0, 0, 7, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 27, 37, 7, 0, 9, 3, 0, 0, 0, 0, 1, 0, 4, 10, 0, 0], [0, 77, 34, 354, 47, 0, 0, 22, 33, 0, 0, 2, 0, 0, 0, 0, 0, 3, 0, 0, 68, 0, 1, 2, 2, 17, 0, 0, 4, 0, 0, 0, 0, 1, 0, 2, 151, 0, 0], [1, 5, 64, 50, 1761, 1, 0, 626, 1067, 10, 0, 1, 3, 0, 0, 2, 0, 1, 0, 2, 46, 0, 1, 9, 112, 7765, 4, 44, 69, 9, 0, 0, 1, 17, 0, 8, 170, 0, 0], [3111, 0, 0, 0, 1, 15411, 0, 10, 26, 135, 17, 0, 2261, 0, 545, 61, 0, 0, 1061, 322, 7, 1321, 0, 0, 0, 4, 491, 0, 230, 0, 37, 515, 71, 84, 0, 19, 1, 0, 5], [3, 0, 0, 0, 0, 0, 424, 0, 12, 4, 9, 2, 0, 33, 0, 1, 0, 114, 0, 0, 4, 0, 8, 0, 0, 0, 4, 0, 111, 0, 1, 0, 42, 40, 47, 58, 1, 7, 3], [5, 108, 10, 27, 712, 5, 0, 18248, 21243, 1250, 8, 7, 36, 0, 12, 3, 0, 269, 5, 142, 5001, 0, 6, 4, 25, 2086, 996, 12, 24790, 0, 0, 89, 40, 315, 0, 1575, 4379, 5, 4], [18, 153, 3, 17, 1306, 31, 5, 24227, 63258, 6139, 27, 16, 249, 5, 165, 12, 0, 955, 16, 1021, 8810, 4, 24, 1, 24, 13491, 5171, 36, 94018, 19, 3, 539, 298, 758, 0, 4264, 4792, 25, 13], [94, 16, 0, 2, 7, 205, 9, 1222, 5775, 43765, 641, 20, 1098, 67, 2127, 326, 26, 280, 185, 11022, 2102, 12, 13, 0, 2, 258, 47498, 1, 89302, 3, 24, 4911, 9843, 13773, 1, 27897, 504, 753, 66], [6, 0, 0, 0, 0, 9, 12, 3, 22, 570, 3256, 2, 80, 962, 898, 1329, 356, 47, 44, 566, 64, 15, 0, 0, 0, 1, 739, 0, 901, 0, 195, 160, 2372, 2908, 1, 522, 4, 666, 574], [0, 286, 1, 0, 0, 0, 2, 6, 39, 10, 0, 165, 0, 1, 1, 1, 0, 272, 0, 0, 57, 0, 118, 0, 1, 1, 4, 1, 103, 0, 0, 0, 5, 34, 3, 90, 24, 14, 0], [739, 1, 0, 1, 0, 2514, 0, 24, 234, 1015, 85, 1, 15465, 5, 5228, 219, 7, 4, 3064, 3210, 16, 454, 0, 0, 0, 30, 3611, 0, 2029, 0, 105, 6428, 292, 163, 0, 176, 6, 4, 86], [2, 0, 0, 0, 0, 0, 30, 0, 6, 88, 862, 0, 1, 237, 30, 23, 51, 12, 4, 8, 4, 0, 3, 0, 0, 2, 62, 0, 88, 0, 7, 11, 323, 408, 0, 97, 0, 50, 88], [133, 2, 0, 0, 0, 548, 5, 15, 148, 2075, 855, 0, 5954, 33, 41798, 2641, 44, 20, 7165, 11365, 39, 293, 0, 0, 0, 7, 5759, 0, 2844, 0, 686, 11231, 7270, 1841, 1, 1750, 13, 83, 438], [18, 0, 2, 0, 0, 44, 0, 8, 15, 307, 1102, 1, 223, 44, 2419, 1842, 63, 15, 532, 599, 29, 50, 0, 0, 0, 0, 348, 0, 362, 0, 690, 516, 663, 1090, 0, 135, 4, 55, 332], [0, 0, 0, 0, 0, 0, 0, 0, 1, 46, 262, 0, 9, 85, 56, 66, 93, 1, 6, 58, 1, 2, 0, 0, 0, 1, 19, 0, 30, 0, 8, 14, 95, 129, 0, 64, 0, 16, 349], [1, 536, 1, 35, 6, 0, 126, 339, 1076, 301, 28, 262, 6, 9, 14, 10, 2, 5581, 3, 29, 6550, 0, 51, 0, 0, 12, 99, 0, 5095, 0, 1, 7, 134, 1028, 18, 7186, 8457, 169, 8], [217, 0, 0, 2, 0, 903, 0, 5, 14, 162, 52, 0, 3152, 2, 6414, 517, 8, 1, 2042, 640, 3, 362, 0, 0, 0, 0, 468, 0, 249, 0, 283, 869, 309, 123, 0, 55, 4, 14, 104], [99, 1, 0, 0, 1, 457, 3, 107, 977, 9356, 515, 1, 3438, 26, 12265, 739, 55, 30, 678, 45493, 240, 61, 1, 0, 1, 62, 30872, 0, 15375, 0, 43, 20046, 13412, 2433, 0, 4551, 70, 100, 114], [3, 633, 6, 82, 60, 5, 5, 5329, 8835, 1899, 70, 87, 23, 12, 60, 29, 1, 7026, 7, 243, 23094, 0, 35, 0, 6, 151, 1120, 2, 42497, 0, 4, 97, 390, 2614, 1, 14429, 13624, 91, 5], [104, 0, 0, 0, 0, 1332, 0, 0, 1, 21, 4, 0, 323, 0, 273, 68, 0, 1, 403, 50, 1, 620, 0, 0, 0, 1, 40, 0, 17, 0, 27, 65, 24, 17, 0, 9, 0, 0, 13], [0, 48, 0, 1, 0, 0, 8, 1, 39, 3, 0, 103, 0, 0, 0, 0, 0, 35, 0, 0, 71, 0, 88, 0, 0, 0, 1, 0, 63, 0, 0, 0, 0, 2, 0, 18, 12, 8, 0], [0, 0, 32, 1, 4, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [8, 1, 38, 1, 113, 0, 0, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 16, 1000, 151, 0, 226, 7, 12, 0, 0, 0, 0, 0, 5, 1, 0, 0], [34, 3, 11, 1, 7130, 8, 2, 2022, 14326, 161, 5, 0, 24, 0, 5, 0, 0, 3, 4, 35, 177, 0, 0, 1, 138, 37008, 199, 190, 2711, 204, 0, 27, 4, 24, 0, 51, 131, 0, 0], [116, 7, 0, 0, 10, 368, 4, 686, 4181, 44294, 609, 4, 3865, 59, 6253, 406, 61, 105, 402, 33289, 1016, 40, 4, 0, 0, 224, 119216, 0, 70472, 0, 32, 13426, 20620, 6470, 0, 18442, 312, 257, 43], [12, 0, 7, 0, 29, 0, 0, 7, 34, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 222, 211, 1, 335, 6, 66, 0, 0, 0, 0, 0, 6, 1, 0, 0], [166, 124, 6, 12, 77, 341, 49, 27102, 86754, 96967, 1183, 115, 2438, 134, 3618, 621, 33, 5670, 201, 20089, 43686, 23, 78, 2, 25, 2546, 82762, 12, 686531, 15, 24, 9277, 11333, 32405, 5, 120876, 13283, 707, 94], [191, 0, 0, 0, 5, 0, 0, 2, 19, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 9, 171, 2, 50, 11, 768, 0, 0, 0, 0, 0, 2, 0, 0, 0], [30, 0, 0, 0, 0, 24, 0, 0, 2, 41, 183, 0, 155, 2, 642, 609, 7, 2, 239, 53, 3, 23, 0, 0, 0, 0, 36, 0, 24, 0, 477, 132, 66, 51, 1, 6, 1, 3, 185], [150, 1, 1, 0, 1, 699, 1, 44, 422, 3562, 167, 0, 7316, 7, 11267, 544, 14, 7, 998, 20067, 106, 56, 0, 0, 0, 28, 12840, 0, 7564, 2, 99, 42527, 2329, 645, 0, 1209, 30, 24, 92], [30, 3, 0, 0, 0, 88, 33, 36, 218, 9205, 2809, 3, 391, 288, 8461, 735, 93, 190, 327, 13440, 322, 17, 0, 0, 0, 15, 19306, 0, 9845, 0, 71, 2380, 20077, 18408, 0, 6139, 64, 1300, 96], [39, 246, 4, 3, 1, 100, 27, 232, 892, 12896, 3708, 26, 146, 421, 2048, 1297, 142, 995, 140, 2326, 2535, 8, 6, 0, 0, 38, 6467, 2, 28869, 0, 51, 607, 18528, 51796, 10, 19871, 595, 3659, 242], [1, 1, 0, 0, 0, 0, 39, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0, 19, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 5, 24, 12, 0, 1, 1], [18, 254, 9, 57, 6, 32, 47, 1506, 4390, 28001, 559, 74, 232, 101, 1542, 244, 83, 7441, 45, 5203, 14469, 31, 23, 0, 1, 82, 19957, 0, 115173, 0, 10, 1341, 6366, 23029, 10, 62222, 4924, 566, 38], [2, 415, 12, 39, 143, 0, 0, 4340, 4865, 545, 14, 30, 12, 0, 26, 2, 1, 7534, 0, 102, 13222, 0, 9, 2, 2, 151, 351, 1, 12084, 1, 1, 23, 130, 654, 0, 4836, 19756, 10, 2], [1, 8, 0, 0, 0, 0, 14, 8, 28, 611, 723, 15, 9, 57, 70, 52, 24, 180, 4, 80, 130, 1, 3, 0, 0, 1, 228, 0, 1009, 0, 4, 27, 1127, 3105, 4, 585, 4, 1301, 12], [7, 0, 0, 0, 0, 1, 2, 0, 7, 92, 570, 1, 72, 99, 453, 462, 435, 23, 120, 114, 0, 16, 0, 0, 0, 0, 53, 0, 47, 0, 220, 104, 119, 206, 1, 31, 1, 14, 1820]];
+      wrap_labels = false;
+      credit = false
+      
+      ////////////////////////////////////////////////////////////
+      /////////// Create scale and layout functions //////////////
+      ////////////////////////////////////////////////////////////
+
+      var colors = d3
+        .scaleOrdinal()
+        .domain(d3.range(Names.length))
+        .range(colors);
+
+      //A "custom" d3 chord function that automatically sorts the order of the chords in such a manner to reduce overlap
+      var chord = customChordLayout()
+        .padding(padding)
+        .sortChords(d3.descending) //which chord should be shown on top when chords cross. Now the biggest chord is at the bottom
+        .matrix(matrix);
+
+      var arc = d3
+        .arc()
+        .innerRadius(innerRadius * 1.01)
+        .outerRadius(outerRadius);
+
+      var path = d3.ribbon().radius(innerRadius);
+
+      ////////////////////////////////////////////////////////////
+      ////////////////////// Create SVG //////////////////////////
+      ///////////////////////////////////////////////////////////
+
+      var svg = d3
+        .select("#" + tag_id)
+        .append("svg")
+        .attr(
+          "viewBox",
+          "0 0 " +
+            (width + margin.left + margin.right) +
+          " " +
+          (height + margin.top + margin.bottom)
+        )
+        .attr("preserveAspectRatio", "xMinYMin meet")
+        .append("g")
+        .attr(
+          "transform",
+          "translate(" +
+            (width / 2 + margin.left) +
+            "," +
+            (height / 2 + margin.top) +
+            ")"
+        );
+
+      d3.select("#" + tag_id)
+        .append("span")
+        .style("display", "block")
+        .style("font-size", "12px")
+        .style("text-align", "right")
+        .style("font-family", '"Arial", sans-serif')
+        .html(
+          'made with <a href="https://github.com/shahinrostami/chord">chord</a></span>'
+        );
+
+      if(credit){
+      d3.select("#" + tag_id).select("span")
+        .append("span")
+        .style("font-size", "12px")
+        .style("font-family", '"Arial", sans-serif')
+        .html(
+          ' [<a href="https://twitter.com/shahinrostami">@ShahinRostami</a>]</span>'
+        );
+      }
+
+      ////////////////////////////////////////////////////////////
+      /////////////// Create the gradient fills //////////////////
+      ////////////////////////////////////////////////////////////
+
+      //Function to create the id for each chord gradient
+      function getGradID(d) {
+        return (
+          "linkGrad-" + tag_id + "-" + d.source.index + "-" + d.target.index
+        );
+      }
+
+
+
+
+      //Create the gradients definitions for each chord
+      var grads = svg
+        .append("defs")
+        .selectAll("linearGradient")
+        .data(chord.chords())
+        .enter()
+        .append("linearGradient")
+        .attr("id", getGradID)
+        .attr("gradientUnits", "userSpaceOnUse")
+        .attr("x1", function (d, i) {
+          return (
+            innerRadius *
+            Math.cos(
+              (d.source.endAngle - d.source.startAngle) / 2 +
+                d.source.startAngle -
+                Math.PI / 2
+            )
+          );
+        })
+        .attr("y1", function (d, i) {
+          return (
+            innerRadius *
+            Math.sin(
+              (d.source.endAngle - d.source.startAngle) / 2 +
+                d.source.startAngle -
+                Math.PI / 2
+            )
+          );
+        })
+        .attr("x2", function (d, i) {
+          return (
+            innerRadius *
+            Math.cos(
+              (d.target.endAngle - d.target.startAngle) / 2 +
+                d.target.startAngle -
+                Math.PI / 2
+            )
+          );
+        })
+        .attr("y2", function (d, i) {
+          return (
+            innerRadius *
+            Math.sin(
+              (d.target.endAngle - d.target.startAngle) / 2 +
+                d.target.startAngle -
+                Math.PI / 2
+            )
+          );
+        });
+
+      //Set the starting color (at 0%)
+      grads
+        .append("stop")
+        .attr("offset", "0%")
+        .attr("stop-color", function (d) {
+          return colors(d.source.index);
+        });
+
+      //Set the ending color (at 100%)
+      grads
+        .append("stop")
+        .attr("offset", "100%")
+        .attr("stop-color", function (d) {
+          return colors(d.target.index);
+        });
+
+      ////////////////////////////////////////////////////////////
+      ////////////////// Draw outer Arcs /////////////////////////
+      ////////////////////////////////////////////////////////////
+
+      var outerArcs = svg
+        .selectAll("g.group")
+        .data(chord.groups)
+        .enter()
+        .append("g")
+        .attr("class", "group")
+        .on("mouseover", fade(0.1, 1))
+        .on("mouseout", fade(opacityDefault, opacityDefault));
+
+      outerArcs
+        .append("path")
+        .style("fill", function (d) {
+          return colors(d.index);
+        })
+        .attr("d", arc)
+        .each(function (d, i) {
+          //Search pattern for everything between the start and the first capital L
+          var firstArcSection = /(^.+?)L/;
+
+          //Grab everything up to the first Line statement
+          var newArc = firstArcSection.exec(d3.select(this).attr("d"))[1];
+          //Replace all the comma's so that IE can handle it
+          newArc = newArc.replace(/,/g, " ");
+
+          //If the end angle lies beyond a quarter of a circle (90 degrees or pi/2)
+          //flip the end and start position
+          if (
+            (d.endAngle > (90 * Math.PI) / 180) &
+            (d.startAngle < (270 * Math.PI) / 180)
+          ) {
+            var startLoc = /M(.*?)A/, //Everything between the first capital M and first capital A
+              middleLoc = /A(.*?)0 0 1/, //Everything between the first capital A and 0 0 1
+              endLoc = /0 0 1 (.*?)$/; //Everything between the first 0 0 1 and the end of the string (denoted by $)
+            //Flip the direction of the arc by switching the start en end point (and sweep flag)
+            //of those elements that are below the horizontal line
+            var newStart = endLoc.exec(newArc)[1];
+            var newEnd = startLoc.exec(newArc)[1];
+            var middleSec = middleLoc.exec(newArc)[1];
+
+            //Build up the new arc notation, set the sweep-flag to 0
+            newArc = "M" + newStart + "A" + middleSec + "0 0 0 " + newEnd;
+          } //if
+
+          //Create a new invisible arc that the text can flow along
+          svg
+            .append("path")
+            .attr("class", "hiddenArcs")
+            .attr("id", "arc-" + tag_id + "-" + i)
+            .attr("d", newArc)
+            .style("fill", "none");
+     });
+          ////////////////////////////////////////////////////////////
+          ////////////////// Append Names ////////////////////////////
+          ////////////////////////////////////////////////////////////
+
+          //Append the label names on the outside
+
+          if (wrap_labels) {
+            outerArcs
+              .append("text")
+              .attr("class", "titles")
+              .attr("dy", function (d, i) {
+                return (d.endAngle > (90 * Math.PI) / 180) &
+                  (d.startAngle < (270 * Math.PI) / 180)
+                  ? 25
+                  : -16;
+              })
+              .append("textPath")
+              .attr("startOffset", "50%")
+              .style("text-anchor", "middle")
+              .attr("xlink:href", function (d, i) {
+                return "#arc-" + tag_id + "-" + i;
+              })
+              .text(function (d, i) {
+                return Names_redux[i];
+              });
+          } else {
+            //Append the label names on the outside
+            outerArcs
+              .append("text")
+              .each(function (d) {
+                d.angle = (d.startAngle + d.endAngle) / 2;
+              })
+              .attr("dy", ".35em")
+              .attr("class", "titles")
+              .attr("text-anchor", function (d) {
+                return d.angle > Math.PI ? "end" : null;
+              })
+              .attr("transform", function (d) {
+                return (
+                  "rotate(" +
+                  ((d.angle * 180) / Math.PI - 90) +
+                  ")" +
+                  "translate(" +
+                  (outerRadius + 10) +
+                  ")" +
+                  (d.angle > Math.PI ? "rotate(180)" : "")
+                );
+              })
+              .text(function (d, i) {
+                return Names_redux[i];
+              });
+          }
+
+          ////////////////////////////////////////////////////////////
+          ////////////////// Draw inner chords ///////////////////////
+          ////////////////////////////////////////////////////////////
+
+          svg
+            .selectAll("path.chord")
+            .data(chord.chords)
+            .enter()
+            .append("path")
+            .attr("class", "chord")
+            .style("fill", function (d) {
+              return "url(#" + getGradID(d) + ")";
+            })
+            .style("opacity", opacityDefault)
+            .attr("d", path)
+            .on("mouseover", mouseoverChord())
+            .on("mouseout", mouseoutChord(opacityDefault, opacityDefault));
+   
+      ////////////////////////////////////////////////////////////
+      ////////////////// Extra Functions /////////////////////////
+      ////////////////////////////////////////////////////////////
+
+      //Returns an event handler for fading a given chord group.
+      function fade(opacityIn, opacityOut) {
+        return function (d, i) {
+          d3.select(this.ownerSVGElement)
+            .selectAll("path.chord")
+            .filter(function (d) {
+              return d.source.index !== i && d.target.index !== i;
+            })
+            .transition()
+            .style("opacity", opacityIn);
+
+          d3.select(this.ownerSVGElement)
+            .selectAll("path.chord")
+            .filter(function (d) {
+              return d.source.index == i || d.target.index == i;
+            })
+            .transition()
+            .style("opacity", opacityOut);
+
+            
+        };
+      } //fade
+
+      //Highlight hovered over chord
+      function mouseoverChord() {
+        return function (d, i) {
+
+        d3.select(this.ownerSVGElement)
+          .selectAll("path.chord")
+          .transition()
+          .style("opacity", 0.1);
+        //Show hovered over chord with full opacity
+        d3.select(this).transition().style("opacity", 1);
+
+        tippy_content = "<span style='font-weight:900'>" +
+            Names[d.source.index] +
+            "</span> and <span style='font-weight:900'>" +
+            Names[d.target.index] +
+            "</span><br>occur together in <span style='font-weight:900'>" +
+            d.source.value +
+            "</span> instances";
+
+        
+
+        
+
+        
+        tippy(this, {
+          allowHTML: true,
+          followCursor: true,
+          content: tippy_content,
+          size: "large",
+          arrow: true,
+        });
+
+      /*d3.select("#list")
+        .html(
+          details[d.source.index][d.target.index]
+        );*/
+      
+
+        };
+        
+      } //fade
+
+      //Bring all chords back to default opacity
+      function mouseoutChord(opacityIn, opacityOut) {
+        return function (d, i) {
+        d3.select(this.ownerSVGElement)
+          .selectAll("path.chord")
+          .transition()
+          .style("opacity", opacityOut);
+        };
+        //Set opacity back to default for all
+      } //function mouseoutChord
+
+
+        };
+        document.body.appendChild(script2);
+      };
+
+      document.body.appendChild(script);
+    </script>
+    <script></script>
+  </body>
+</html>
