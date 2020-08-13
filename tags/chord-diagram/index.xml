@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>chord diagram on Dallin Witt</title>
+    <link>https://dallinwitt.github.io/portfolio/tags/chord-diagram/</link>
+    <description>Recent content in chord diagram on Dallin Witt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dallinwitt.github.io/portfolio/tags/chord-diagram/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Interactive Visualization of Divvy Bike Movement</title>
+      <link>https://dallinwitt.github.io/portfolio/post/divvy_chord/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/divvy_chord/</guid>
+      <description>Analyzed gigabytes of data from Divvy Bike to look for trends and patterns. Used lesser-known data visualization tools to represent the information in a more digestible and understandable way. Created an interactive tool that allows the user to see how bikes move between to specific wards in Chicago.  Click here to see the interactive diagram
+Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Visualization of Divvy Bike Inflows and Outflows</title>
+      <link>https://dallinwitt.github.io/portfolio/post/divvy_sankey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/divvy_sankey/</guid>
+      <description>Analyzed gigabytes of data from Divvy Bike to look for trends and patterns. Used lesser-known data visualization tools to represent the information in a more digestible and understandable way. Created a diagram that clearly shows the primary origins and destinations of Divvy bikes. Code is easily adaptable to any station.    Link to GitHub repository</description>
+    </item>
+    
+  </channel>
+</rss>

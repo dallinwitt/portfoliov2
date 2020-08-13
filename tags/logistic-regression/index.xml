@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>logistic regression on Dallin Witt</title>
+    <link>https://dallinwitt.github.io/portfolio/tags/logistic-regression/</link>
+    <description>Recent content in logistic regression on Dallin Witt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dallinwitt.github.io/portfolio/tags/logistic-regression/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Supervised Machine Learning: SLC Flight Arrival Classification</title>
+      <link>https://dallinwitt.github.io/portfolio/post/slc_airport_ml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/slc_airport_ml/</guid>
+      <description>Analyzed multiple ML models and ensembles to find the strongest prediction tool for the task. Iterated over several hyperparameters to find the values that resulted in the strongest predictive power. The final model had a precision of 73% for on time flights, and 69% for late flights.  Link to GitHub repository</description>
+    </item>
+    
+  </channel>
+</rss>

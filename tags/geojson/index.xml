@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>geojson on Dallin Witt</title>
+    <link>https://dallinwitt.github.io/portfolio/tags/geojson/</link>
+    <description>Recent content in geojson on Dallin Witt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dallinwitt.github.io/portfolio/tags/geojson/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tableau: Educational Attainment in Utah by Sex and Census Tract</title>
+      <link>https://dallinwitt.github.io/portfolio/post/ut_ed_attainment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/ut_ed_attainment/</guid>
+      <description>Used data from the Utah state government&amp;rsquo;s open data catalog. Used tools such as pivoting, stacking, and merging to transform the highly untidy dataset into something that could be used for meaningful insights. Merged the dataset with a GEOJSON file to assign geolocation information to each datum. Visualized the cleaned-up data in a Tableau dashboard, where users can interact with the visualization to extract further insight and information.</description>
+    </item>
+    
+  </channel>
+</rss>

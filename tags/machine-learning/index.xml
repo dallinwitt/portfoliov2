@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>machine learning on Dallin Witt</title>
+    <link>https://dallinwitt.github.io/portfolio/tags/machine-learning/</link>
+    <description>Recent content in machine learning on Dallin Witt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dallinwitt.github.io/portfolio/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Neural Network Machine Learning: Loan Repayment Risk Assessment</title>
+      <link>https://dallinwitt.github.io/portfolio/post/lending_club/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/lending_club/</guid>
+      <description>Cleaned and validated a very large dataset (&amp;gt;100 attributes, &amp;gt;1,000,000 entries) to prepare it for analysis Used several different neural network models (both classification and regression) to assess risk in different ways.  Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Neural Network Machine Learning: Predicting Bikeshare Availability in San Francisco</title>
+      <link>https://dallinwitt.github.io/portfolio/post/sfo_bikeshare/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/sfo_bikeshare/</guid>
+      <description>Used data from the San Francisco MTA to train a neural network to predict the number of bikes available at a given station at a given time. Used Keras / TensorFlow to create the neural network and SQLite to manage the database. Employed a variety of tools to develop the best possible network, such as randomized search hyperparameter optimization, and k-fold cross validation to ensure statistically robust results.</description>
+    </item>
+    
+    <item>
+      <title>Supervised Machine Learning: SLC Flight Arrival Classification</title>
+      <link>https://dallinwitt.github.io/portfolio/post/slc_airport_ml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/slc_airport_ml/</guid>
+      <description>Analyzed multiple ML models and ensembles to find the strongest prediction tool for the task. Iterated over several hyperparameters to find the values that resulted in the strongest predictive power. The final model had a precision of 73% for on time flights, and 69% for late flights.  Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Supervised ML Model with Web GUI: Wine Quality Prediction</title>
+      <link>https://dallinwitt.github.io/portfolio/post/wine_quality/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/wine_quality/</guid>
+      <description>Used wine quality data from the UCI Machine Learning Repository to create a ridge regressor that predicts wine quality rating based on chemical and physical properties Used Flask API to create an API for the ML model, then created an HTML frontend for the API.  Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Unsupervised Machine Learning: Clustering Books by Description</title>
+      <link>https://dallinwitt.github.io/portfolio/post/goodreads_ml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/goodreads_ml/</guid>
+      <description>Constructed an unsupervised machine learning algorithm to cluster books based on their descriptions on Goodreads. Analyzed word frequency using a TF-IDF matrix and k means clustering. Examining clusters (shown below) indicated effective and logical clustering.              Link to GitHub repository</description>
+    </item>
+    
+  </channel>
+</rss>

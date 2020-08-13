@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data visualization on Dallin Witt</title>
+    <link>https://dallinwitt.github.io/portfolio/tags/data-visualization/</link>
+    <description>Recent content in data visualization on Dallin Witt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dallinwitt.github.io/portfolio/tags/data-visualization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bokeh: Interactive Visualization of Poverty&#39;s Influence on Election Participation and Outcomes</title>
+      <link>https://dallinwitt.github.io/portfolio/post/poverty_election_participation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/poverty_election_participation/</guid>
+      <description>Synthesized data from a variety of private and governmental resources to draw new and useful conclusions. Used pivoting, joining, and stacking to transform the data into a more helpful and informative structure. Created an interactive dashboard in Bokeh to allow the end-user to better interpret the results.  Click here to see the Bokeh plot
+Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Interactive Visualization of Divvy Bike Movement</title>
+      <link>https://dallinwitt.github.io/portfolio/post/divvy_chord/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/divvy_chord/</guid>
+      <description>Analyzed gigabytes of data from Divvy Bike to look for trends and patterns. Used lesser-known data visualization tools to represent the information in a more digestible and understandable way. Created an interactive tool that allows the user to see how bikes move between to specific wards in Chicago.  Click here to see the interactive diagram
+Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Plotly: Interactive Visualization of Politician Approval Ratings during Covid-19</title>
+      <link>https://dallinwitt.github.io/portfolio/post/covid_approval_ratings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/covid_approval_ratings/</guid>
+      <description>Used wine survey data from Morning Consult Intelligence and the New York Times Covid data repository to assess the impact that increases in infection and death rates have on the approval ratings of governors and senators. Plotted data using separate tools that were individually highly information dense and highly lay-readable.  Click here to see one of the Plotly diagrams
+Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Salt Lake City Cyclist- and Pedestrian-involved Car Crash Visualization</title>
+      <link>https://dallinwitt.github.io/portfolio/post/slc_bike_ped_crashes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/slc_bike_ped_crashes/</guid>
+      <description>Used data from the Utah state government&amp;rsquo;s open data catalog. Used custom functions to mutate the data into a more helpful and informative structure. Visualized the joined data using ggplot2 to represent an abstract idea in a simple way, where the colors and graphics aided in explaining the concepts.  Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Tableau: Educational Attainment in Utah by Sex and Census Tract</title>
+      <link>https://dallinwitt.github.io/portfolio/post/ut_ed_attainment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/ut_ed_attainment/</guid>
+      <description>Used data from the Utah state government&amp;rsquo;s open data catalog. Used tools such as pivoting, stacking, and merging to transform the highly untidy dataset into something that could be used for meaningful insights. Merged the dataset with a GEOJSON file to assign geolocation information to each datum. Visualized the cleaned-up data in a Tableau dashboard, where users can interact with the visualization to extract further insight and information.</description>
+    </item>
+    
+    <item>
+      <title>Tableau: Utah Opioid Prescription Analysis</title>
+      <link>https://dallinwitt.github.io/portfolio/post/ut_opioids/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/ut_opioids/</guid>
+      <description>Used data from the Utah state government&amp;rsquo;s open data catalog in conjunction with scraped data on community size and income. Visualized the joined data using ggplot2 to represent an abstract idea in a simple way, where the colors and graphics aided in explaining the concepts. Created an interactive tool which allows users to see county-level opioid prescription rates on a zoom-enabled map.  Click here to see the dashboard</description>
+    </item>
+    
+    <item>
+      <title>Utah Kindergarten MMR Vaccination Analysis</title>
+      <link>https://dallinwitt.github.io/portfolio/post/ut_vaccinations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/ut_vaccinations/</guid>
+      <description>Used vaccination data from the Utah sate government&amp;rsquo;s open data catalog, as well as school data from the National Center for Educational Statistics. Used data analysis and visualization tools to show relationships between vaccination rates and school district, poverty, and locale.  Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Utah Regional Covid-19 Spread Visualization</title>
+      <link>https://dallinwitt.github.io/portfolio/post/ut_covid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/ut_covid/</guid>
+      <description>Used data from the New York Times&amp;rsquo; Covid-19 bot in conjunction with scraped data on community size. Visualized the joined data using ggplot2 to represent an abstract idea in a simple way, where the colors and graphics aided in explaining the concepts.  Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Utah Relative Housing Price Analysis</title>
+      <link>https://dallinwitt.github.io/portfolio/post/ut_housing_affordability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/ut_housing_affordability/</guid>
+      <description>Used data from the Utah state government&amp;rsquo;s open data catalog in conjunction with county-level income data from the St. Louis Federal Reserve. Visualized the separated and joined data using ggplot2 to represent an abstract idea in a simple way, where the colors and graphics aided in explaining the concepts.  Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Utah Sunrise and Sunset Crash Visualization</title>
+      <link>https://dallinwitt.github.io/portfolio/post/ut_crash_srss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/ut_crash_srss/</guid>
+      <description>Used data from the Utah state government&amp;rsquo;s open data catalog in conjunction with scraped data on sunrise and sunset times. Visualized the joined data using ggplot2 to represent an abstract idea in a simple way, where the colors and graphics aided in explaining the concepts.  Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Visualization of Divvy Bike Inflows and Outflows</title>
+      <link>https://dallinwitt.github.io/portfolio/post/divvy_sankey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/divvy_sankey/</guid>
+      <description>Analyzed gigabytes of data from Divvy Bike to look for trends and patterns. Used lesser-known data visualization tools to represent the information in a more digestible and understandable way. Created a diagram that clearly shows the primary origins and destinations of Divvy bikes. Code is easily adaptable to any station.    Link to GitHub repository</description>
+    </item>
+    
+  </channel>
+</rss>

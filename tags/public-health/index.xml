@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>public health on Dallin Witt</title>
+    <link>https://dallinwitt.github.io/portfolio/tags/public-health/</link>
+    <description>Recent content in public health on Dallin Witt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dallinwitt.github.io/portfolio/tags/public-health/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tableau: Utah Opioid Prescription Analysis</title>
+      <link>https://dallinwitt.github.io/portfolio/post/ut_opioids/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/ut_opioids/</guid>
+      <description>Used data from the Utah state government&amp;rsquo;s open data catalog in conjunction with scraped data on community size and income. Visualized the joined data using ggplot2 to represent an abstract idea in a simple way, where the colors and graphics aided in explaining the concepts. Created an interactive tool which allows users to see county-level opioid prescription rates on a zoom-enabled map.  Click here to see the dashboard</description>
+    </item>
+    
+    <item>
+      <title>Utah Kindergarten MMR Vaccination Analysis</title>
+      <link>https://dallinwitt.github.io/portfolio/post/ut_vaccinations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/ut_vaccinations/</guid>
+      <description>Used vaccination data from the Utah sate government&amp;rsquo;s open data catalog, as well as school data from the National Center for Educational Statistics. Used data analysis and visualization tools to show relationships between vaccination rates and school district, poverty, and locale.  Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Utah Regional Covid-19 Spread Visualization</title>
+      <link>https://dallinwitt.github.io/portfolio/post/ut_covid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/ut_covid/</guid>
+      <description>Used data from the New York Times&amp;rsquo; Covid-19 bot in conjunction with scraped data on community size. Visualized the joined data using ggplot2 to represent an abstract idea in a simple way, where the colors and graphics aided in explaining the concepts.  Link to GitHub repository</description>
+    </item>
+    
+  </channel>
+</rss>

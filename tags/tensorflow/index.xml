@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tensorflow on Dallin Witt</title>
+    <link>https://dallinwitt.github.io/portfolio/tags/tensorflow/</link>
+    <description>Recent content in tensorflow on Dallin Witt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dallinwitt.github.io/portfolio/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Neural Network Machine Learning: Loan Repayment Risk Assessment</title>
+      <link>https://dallinwitt.github.io/portfolio/post/lending_club/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/lending_club/</guid>
+      <description>Cleaned and validated a very large dataset (&amp;gt;100 attributes, &amp;gt;1,000,000 entries) to prepare it for analysis Used several different neural network models (both classification and regression) to assess risk in different ways.  Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Neural Network Machine Learning: Predicting Bikeshare Availability in San Francisco</title>
+      <link>https://dallinwitt.github.io/portfolio/post/sfo_bikeshare/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/sfo_bikeshare/</guid>
+      <description>Used data from the San Francisco MTA to train a neural network to predict the number of bikes available at a given station at a given time. Used Keras / TensorFlow to create the neural network and SQLite to manage the database. Employed a variety of tools to develop the best possible network, such as randomized search hyperparameter optimization, and k-fold cross validation to ensure statistically robust results.</description>
+    </item>
+    
+  </channel>
+</rss>

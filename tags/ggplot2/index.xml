@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ggplot2 on Dallin Witt</title>
+    <link>https://dallinwitt.github.io/portfolio/tags/ggplot2/</link>
+    <description>Recent content in ggplot2 on Dallin Witt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dallinwitt.github.io/portfolio/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Plotly: Interactive Visualization of Politician Approval Ratings during Covid-19</title>
+      <link>https://dallinwitt.github.io/portfolio/post/covid_approval_ratings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/covid_approval_ratings/</guid>
+      <description>Used wine survey data from Morning Consult Intelligence and the New York Times Covid data repository to assess the impact that increases in infection and death rates have on the approval ratings of governors and senators. Plotted data using separate tools that were individually highly information dense and highly lay-readable.  Click here to see one of the Plotly diagrams
+Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Salt Lake City Cyclist- and Pedestrian-involved Car Crash Visualization</title>
+      <link>https://dallinwitt.github.io/portfolio/post/slc_bike_ped_crashes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/slc_bike_ped_crashes/</guid>
+      <description>Used data from the Utah state government&amp;rsquo;s open data catalog. Used custom functions to mutate the data into a more helpful and informative structure. Visualized the joined data using ggplot2 to represent an abstract idea in a simple way, where the colors and graphics aided in explaining the concepts.  Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Tableau: Utah Opioid Prescription Analysis</title>
+      <link>https://dallinwitt.github.io/portfolio/post/ut_opioids/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/ut_opioids/</guid>
+      <description>Used data from the Utah state government&amp;rsquo;s open data catalog in conjunction with scraped data on community size and income. Visualized the joined data using ggplot2 to represent an abstract idea in a simple way, where the colors and graphics aided in explaining the concepts. Created an interactive tool which allows users to see county-level opioid prescription rates on a zoom-enabled map.  Click here to see the dashboard</description>
+    </item>
+    
+    <item>
+      <title>Utah Regional Covid-19 Spread Visualization</title>
+      <link>https://dallinwitt.github.io/portfolio/post/ut_covid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/ut_covid/</guid>
+      <description>Used data from the New York Times&amp;rsquo; Covid-19 bot in conjunction with scraped data on community size. Visualized the joined data using ggplot2 to represent an abstract idea in a simple way, where the colors and graphics aided in explaining the concepts.  Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Utah Relative Housing Price Analysis</title>
+      <link>https://dallinwitt.github.io/portfolio/post/ut_housing_affordability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/ut_housing_affordability/</guid>
+      <description>Used data from the Utah state government&amp;rsquo;s open data catalog in conjunction with county-level income data from the St. Louis Federal Reserve. Visualized the separated and joined data using ggplot2 to represent an abstract idea in a simple way, where the colors and graphics aided in explaining the concepts.  Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Utah Sunrise and Sunset Crash Visualization</title>
+      <link>https://dallinwitt.github.io/portfolio/post/ut_crash_srss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/ut_crash_srss/</guid>
+      <description>Used data from the Utah state government&amp;rsquo;s open data catalog in conjunction with scraped data on sunrise and sunset times. Visualized the joined data using ggplot2 to represent an abstract idea in a simple way, where the colors and graphics aided in explaining the concepts.  Link to GitHub repository</description>
+    </item>
+    
+  </channel>
+</rss>

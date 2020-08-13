@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>time series data on Dallin Witt</title>
+    <link>https://dallinwitt.github.io/portfolio/tags/time-series-data/</link>
+    <description>Recent content in time series data on Dallin Witt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dallinwitt.github.io/portfolio/tags/time-series-data/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Salt Lake City Cyclist- and Pedestrian-involved Car Crash Visualization</title>
+      <link>https://dallinwitt.github.io/portfolio/post/slc_bike_ped_crashes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/slc_bike_ped_crashes/</guid>
+      <description>Used data from the Utah state government&amp;rsquo;s open data catalog. Used custom functions to mutate the data into a more helpful and informative structure. Visualized the joined data using ggplot2 to represent an abstract idea in a simple way, where the colors and graphics aided in explaining the concepts.  Link to GitHub repository</description>
+    </item>
+    
+    <item>
+      <title>Utah Sunrise and Sunset Crash Visualization</title>
+      <link>https://dallinwitt.github.io/portfolio/post/ut_crash_srss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/ut_crash_srss/</guid>
+      <description>Used data from the Utah state government&amp;rsquo;s open data catalog in conjunction with scraped data on sunrise and sunset times. Visualized the joined data using ggplot2 to represent an abstract idea in a simple way, where the colors and graphics aided in explaining the concepts.  Link to GitHub repository</description>
+    </item>
+    
+  </channel>
+</rss>

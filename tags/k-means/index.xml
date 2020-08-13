@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>k means on Dallin Witt</title>
+    <link>https://dallinwitt.github.io/portfolio/tags/k-means/</link>
+    <description>Recent content in k means on Dallin Witt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dallinwitt.github.io/portfolio/tags/k-means/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Unsupervised Machine Learning: Clustering Books by Description</title>
+      <link>https://dallinwitt.github.io/portfolio/post/goodreads_ml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/goodreads_ml/</guid>
+      <description>Constructed an unsupervised machine learning algorithm to cluster books based on their descriptions on Goodreads. Analyzed word frequency using a TF-IDF matrix and k means clustering. Examining clusters (shown below) indicated effective and logical clustering.              Link to GitHub repository</description>
+    </item>
+    
+  </channel>
+</rss>
