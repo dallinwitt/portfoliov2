@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Hypothesis Testing: Efficacy of Web-based Interventions on Happiness and Depressive Symptoms</title>
+      <link>https://dallinwitt.github.io/portfolio/post/pos_psych_abtest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/post/pos_psych_abtest/</guid>
+      <description>Used results published in the Journal of Open Psychological Data to assess the statistical significance of results from a study Used various statistical methods including ANOVA and paired T-tests to assess whether intuitive and apparent results were actually statistically significant.  Link to GitHub repository</description>
+    </item>
+    
+    <item>
       <title>Plotly: Interactive Visualization of Politician Approval Ratings during Covid-19</title>
       <link>https://dallinwitt.github.io/portfolio/post/covid_approval_ratings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

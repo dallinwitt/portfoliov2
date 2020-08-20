@@ -11,6 +11,24 @@
     
     
     <item>
+      <title>a/b testing</title>
+      <link>https://dallinwitt.github.io/portfolio/tags/a/b-testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/tags/a/b-testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>anova</title>
+      <link>https://dallinwitt.github.io/portfolio/tags/anova/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/tags/anova/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>bokeh</title>
       <link>https://dallinwitt.github.io/portfolio/tags/bokeh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -115,6 +133,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dallinwitt.github.io/portfolio/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hypothesis testing</title>
+      <link>https://dallinwitt.github.io/portfolio/tags/hypothesis-testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/tags/hypothesis-testing/</guid>
       <description></description>
     </item>
     
@@ -263,11 +290,29 @@
     </item>
     
     <item>
+      <title>statistics</title>
+      <link>https://dallinwitt.github.io/portfolio/tags/statistics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/tags/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>supervised ML</title>
       <link>https://dallinwitt.github.io/portfolio/tags/supervised-ml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dallinwitt.github.io/portfolio/tags/supervised-ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>t-test</title>
+      <link>https://dallinwitt.github.io/portfolio/tags/t-test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dallinwitt.github.io/portfolio/tags/t-test/</guid>
       <description></description>
     </item>
     
